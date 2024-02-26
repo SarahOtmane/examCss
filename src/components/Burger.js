@@ -29,6 +29,7 @@ function Burger (){
                         <FaBellConcierge className="size big" />
                         <p>Service</p>
                     </a>
+                    <hr></hr>
                     <a className="link">
                         <RiAdminFill className="size big" />
                         <p>Administrateur</p>
@@ -39,6 +40,7 @@ function Burger (){
                         <p>Modifier le service</p>
                         <MdSystemUpdateAlt className="size small" />
                     </a>
+                    <hr></hr>
                     <a className="link">
                         <p className="red">Fermer le service</p>
                         <GoMoveToEnd className="size small red" />

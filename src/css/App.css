@@ -105,9 +105,16 @@ body {
   margin-left: 10%;
 }
 
+.burger .blur .container .down .link, .burger .blur .container .up .link {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  color: #000000;
+}
+
 /* ------------- Header ------------- */
 header {
-  margin-top: 2rem;
+  padding-top: 2rem;
   position: relative;
 }
 header article {
@@ -134,11 +141,11 @@ header article h1 {
   font-size: 1.3rem;
   padding: 0.5rem 1.5rem;
   cursor: pointer;
+  border-radius: 0.5rem;
 }
 .home article button.click {
   color: #000000;
   background-color: #E9E9E9;
-  border-radius: 0.5rem;
 }
 
 /* ------------- Employe ------------- */
@@ -210,17 +217,24 @@ header article h1 {
   margin: 1.5rem auto;
 }
 .service div button.dark {
-  padding: 1.5rem 2rem;
-  width: 30%;
+  padding: 0.3rem;
+  width: 40%;
   margin: auto;
   justify-content: space-between;
   margin-bottom: 2rem;
   border: none;
   border-radius: 3rem;
   background-color: rgba(255, 107, 64, 0.2117647059);
+  border: 1px solid #FF6B40;
 }
 .service div button.dark .icon {
-  font-size: 40px;
+  font-size: 70px;
+  padding: 1rem;
+  border-radius: 50%;
+}
+.service div button.dark .icon.light {
+  color: #FF6B40;
+  background-color: #ffffff;
 }
 .service div button.dark + p {
   color: #000000;
@@ -271,15 +285,16 @@ header article h1 {
   font-size: 31px;
   margin-right: 10px;
 }
+.burger .blur .container .up .link + hr {
+  border: 0.2px solid #E2E2E2;
+  width: 80%;
+}
 .burger .blur .container .down .link {
   justify-content: center;
 }
 .burger .blur .container .down .link .small {
   font-size: 20px;
   margin-left: 10px;
-}
-.burger .blur .container .link:first-child {
-  border-bottom: 1px solid #E2E2E2;
 }
 .burger .blur .container .closeMenu {
   font-size: 45px;
@@ -295,6 +310,10 @@ header article h1 {
 .burger .blur .container .down .red {
   color: red;
 }
+.burger .blur .container .down .link + hr {
+  border: 0.2px solid #E2E2E2;
+  width: 95%;
+}
 .burger .blur .container p {
   font-size: 20px;
 }
@@ -309,12 +328,6 @@ header article h1 {
 .isBlur {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-}
-
-.burger .blur .container .up .link, .burger .blur .container .down .link {
-  display: flex;
-  align-items: center;
-  padding: 20px;
 }
 
 /* ------------- Inputt ------------- */
@@ -335,4 +348,56 @@ div.input input {
   border: none;
   background: #F4F4F4;
   border-radius: 7px;
+}
+
+/* ------------- Dark mode ------------- */
+body.darkMode {
+  background-color: #000000;
+}
+
+header.darkMode h1 {
+  color: #ffffff;
+}
+header.darkMode .burger .openMenu {
+  color: #ffffff;
+}
+header.darkMode .burger .blur .container {
+  background-color: #000000;
+}
+header.darkMode .burger .blur .container .closeMenu {
+  color: #ffffff;
+}
+header.darkMode .burger .blur .container .link {
+  color: #ffffff;
+}
+
+.home.darkMode button {
+  background-color: #000000;
+}
+.home.darkMode button.click {
+  color: #ffffff;
+  background-color: #474747;
+}
+.home.darkMode .employe {
+  color: #ffffff;
+}
+.home.darkMode .employe button[type=submit] {
+  background-color: rgba(255, 107, 64, 0.2117647059);
+}
+.home.darkMode .service {
+  color: #ffffff;
+}
+.home.darkMode .service p.poste {
+  color: #E1E1E1;
+  background-color: #474747;
+}
+.home.darkMode .service .icon.dark {
+  color: #ffffff;
+}
+.home.darkMode .service .icon:last-child {
+  color: #FF6B40;
+  background-color: #ffffff;
+}
+.home.darkMode .service button.dark + p {
+  color: #ffffff;
 }/*# sourceMappingURL=App.css.map */

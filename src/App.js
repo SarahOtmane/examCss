@@ -18,10 +18,12 @@ function App(){
         { nom: 'Darlene Robertson', poste:'salle'}
     ]);
 
+    const [isDarkMode, setIsDarkMode] = useState(false);
+
     return(
         <BrowserRouter>
             <Routes>
-                <Route path='/' element={<Home allEmploye={allEmploye} />} />
+                <Route path='/' element={<Home allEmploye={allEmploye} isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />} />
                 <Route path='/tips' element={<AddTips />} />
             </Routes>
         </BrowserRouter>

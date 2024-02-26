@@ -4,7 +4,9 @@ import { GoSun } from "react-icons/go";
 import { IoMoonOutline } from "react-icons/io5";
 
 
-function Service({employeSelected}){
+function Service({employeSelected, isDarkMode, setIsDarkMode}){
+    const changeMode = () =>{ setIsDarkMode(!isDarkMode) }
+
     return(
         <section className='service'>
             <h2>Employés sélectionnés</h2>
@@ -20,11 +22,11 @@ function Service({employeSelected}){
             <div>
                 <div>
                     <p>Service</p>
-                    <button className='dark'>
-                        <GoSun className='icon' />
+                    <button className='dark' onClick={changeMode}>
+                        <GoSun className={`icon ${isDarkMode ? "dark" : "light"}`} />
                         <IoMoonOutline className='icon' />
                     </button>
-                    <p>midi</p>
+                    <p>{isDarkMode ? "soir" : "midi"}</p>
                 </div>
                 <button type='submit'>Commencer le service !</button>
             </div>
