@@ -1,0 +1,549 @@
+@import '_reset.scss'
+@import '_variables.sass'
+
+/* ------------- Global css ------------- */
+body
+    max-width: 576px
+    min-height: 100vh
+    font-family:'Arial', sans-serif
+
+%row
+    display: flex
+    flex-direction: row
+
+%width-80
+    width: 80%
+    margin: auto
+
+%weight-bold
+    font-weight: bold
+
+%button
+    background-color: $orange_clair
+    color: $orange
+    border: none
+    font-size: 1.5rem
+    border-radius: 2rem
+    @extend %width-80
+    padding: 1rem    
+    position: fixed
+    margin-left: 10%
+
+%link
+    display: flex
+    align-items: center
+    padding: 20px
+    color: $noir
+
+%bouton-choix
+        padding: 0 10%
+        margin: 2rem 0
+        @extend %row
+        justify-content: space-between
+    
+        button
+            color: #999999
+            background-color: #fff
+            border: none
+            font-size: 1.3rem   
+            padding: .5rem 1.5rem
+            cursor: pointer
+            border-radius: .5rem
+
+        button.click
+            color: $noir
+            background-color: #E9E9E9
+
+%figure
+    @extend %row
+    width: 40%
+    justify-content: space-between
+    margin-left: 30%
+    margin-top: 5rem 
+    border: 1px solid #00000017
+    padding: .5rem 1rem   
+    border-radius: .5rem
+    box-shadow: 0px 0px 12px 0px #00000017
+    position: fixed
+
+
+
+
+
+
+
+/* ------------- Header ------------- */
+header
+    @extend %width-80
+    padding-top: 2rem
+    position: relative
+    
+    article
+        width: 60%
+
+        p
+            color: #999999
+            font-size: 17px
+        
+        h1
+            font-size: 34px
+            @extend %weight-bold
+
+
+
+    
+
+
+
+
+
+
+/* ------------- Home ------------- */
+.home
+    article
+        @extend %bouton-choix
+            
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------- Employe ------------- */
+.employe
+    ul
+        height: 60vh
+        overflow: auto
+
+        li
+            @extend %width-80
+            border: 1px solid #B8B8B8
+            border-radius: .5rem 
+            margin-bottom: 1rem
+            @extend %row
+            align-items: center
+            justify-content: space-between
+            padding: .5rem 1rem
+
+            div
+                @extend %row
+                align-items: center
+
+                p
+                    padding-left: 2rem
+                    font-size: 1.5rem
+                    @extend %weight-bold
+
+            input[type="checkbox"]
+                width: 20px
+                height:  20px
+                cursor: pointer
+
+            input[type="checkbox"]:checked 
+                background-color: $orange
+                border-color: $orange
+
+    button[type="submit"]
+        @extend %button
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------- Service ------------- */
+.service
+    h2
+        color: $orange
+        font-size: 24px
+        text-align: center
+        margin-bottom: 1.5rem
+    
+    ul
+        height: 27vh
+        overflow: auto
+        li
+            @extend %width-80
+            @extend %row
+            align-items: center
+            justify-content: space-between
+            padding-bottom: 1rem
+            border-bottom: 1px solid #D9D9D9
+            margin-bottom: 1rem
+
+            p
+                font-size: 20px
+                @extend %weight-bold
+
+            p.poste
+                color: $gris_ecriture
+                background-color: $gris_back
+                font-size: 15px
+                padding: .5rem 1rem
+                border-radius: 2rem
+
+    div
+        width: 100%
+        height: max-content
+
+        p
+            color: $orange
+            text-align: center
+            font-size: 24px
+            @extend %width-80
+            margin: 1.5rem auto
+
+        
+        button.dark
+            padding: .3rem
+            width: 40%
+            margin: auto
+            @extend %row
+            justify-content: space-between
+            margin-bottom: 2rem
+            border: none
+            border-radius: 3rem
+            background-color: $orange_clair
+            border: 1px solid $orange
+
+            .icon
+                font-size: 70px
+                padding: 1rem
+                border-radius: 50%
+            
+            .icon.light
+                color: $orange
+                background-color: $white
+
+        button.dark + p
+            color: $noir
+
+
+        button[type="submit"]
+            @extend %button
+            position: inherit
+
+
+
+
+
+
+
+
+
+
+/* ------------- Burger ------------- */
+.burger
+    height: 100vh
+    max-height: 100vh
+    position: fixed
+    z-index: 999
+    top: 0
+    right: 0
+    .openMenu
+        font-size: 38px
+        position: absolute
+        top: 50px
+        right: 30px
+    .blur
+        display: flex
+        justify-content: flex-end
+        height: 100%
+        width: 100%
+        .container
+            background: $white
+            height: 100%
+            width: 80vw
+            text-align: end
+            position: relative
+            .up
+                position: absolute
+                right: 0
+                width: 70vw
+                margin-top: 50px
+                .link:first-child
+                    border-right: 6px solid $orange
+                    color: $orange
+                .link
+                    @extend %link
+                    .big
+                        font-size: 31px
+                        margin-right: 10px
+                .link + hr
+                    border: .2px solid $line
+                    width: 80%
+            .down .link
+                @extend %link
+                justify-content: center
+                .small
+                    font-size: 20px
+                    margin-left: 10px
+            .closeMenu
+                font-size: 45px
+                margin-top: 50px
+                margin-right: 30px
+            .down
+                position: absolute
+                bottom: 0
+                left: 7%
+                width: 85%
+                .red
+                    color: red
+                .link + hr
+                    border: .2px solid $line
+                    width: 95%
+            p
+                font-size: 20px
+            span
+                color: red
+.disappear
+    display: none
+.isBlur
+    -webkit-backdrop-filter: blur(10px)
+    backdrop-filter: blur(10px)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------- Inputt ------------- */
+div.input
+    width: 80%
+    margin: auto
+    font-size: 20px
+    margin-top: 25px
+
+    label
+        width: 100%
+        color: $orange
+        font-weight: bold
+    
+    input
+        width: 100%
+        padding: 1rem 1.5rem
+        border: none
+        background: $input_back
+        border-radius: 7px
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------- Tips ---------------*/
+.addTips
+    .shortcut
+        display: flex
+        justify-content: center
+        .tips
+            border: 2px solid $orange
+            color: $orange
+            background: $white
+            border-radius: 25px
+            padding: 7px 22px
+            font-size: 20px
+            text-align: center
+            margin: 30px 20px 0 20px
+    .button
+        @extend %button
+        margin-left: 0
+
+    .message
+        @extend %row
+        color: #3CDC4C
+        background-color: #F7F7F7
+        border-bottom: 1px solid #3CDC4C
+        position: absolute
+        top: 0
+        left: 15%
+        padding: 1rem 0
+        font-size: 25px
+        width: 70%
+        
+        p
+            margin: auto
+
+
+
+
+
+
+
+
+
+
+/* --------------- AddEmploye ---------------*/
+.addEmploye
+    form
+        p
+            color: $orange
+            font-size: 20px
+            margin-top: 2rem
+            @extend %width-80
+            @extend %weight-bold
+    
+        button.poste
+            padding: .3rem
+            width: 40%
+            margin: auto
+            margin-top: 2rem
+            @extend %row
+            justify-content: space-between
+            margin-bottom: 2rem
+            border: none
+            border-radius: 3rem
+            background-color: $orange_clair
+            border: 1px solid $orange
+
+            .icon
+                font-size: 70px
+                padding: 1rem
+                border-radius: 50%
+
+            .icon.selected
+                color: $orange
+                background-color: $white
+
+        button + p
+            color: $noir
+            text-align: center
+
+        button[type='submit']
+            @extend %button
+            margin-top: 4rem
+            position: inherit
+        
+    figure
+        @extend %figure
+
+
+
+
+
+
+
+
+
+        
+/* --------------- RemoveEmploye ---------------*/
+.remove
+    article.remove
+        @extend %bouton-choix
+        width: 70%  
+        margin: auto
+        margin-top: 3rem
+    
+    ul
+        height: 55vh
+        margin-top: 3rem
+        overflow: auto
+        li
+            @extend %width-80
+            @extend %row
+            align-items: center
+            justify-content: space-between
+            padding-bottom: 1rem
+            border-bottom: 1px solid #D9D9D9
+            margin-bottom: 1rem
+
+            p
+                font-size: 20px
+                @extend %weight-bold
+
+            p.poste
+                color: $gris_ecriture
+                background-color: $gris_back
+                font-size: 15px
+                padding: .5rem 1rem
+                border-radius: 2rem
+    
+    figure
+        @extend %figure
+        margin-top: 2rem
+
+
+
+
+
+
+
+
+
+
+
+/* ------------- Dark mode ------------- */
+body.darkMode
+    background-color: $noir
+
+header.darkMode
+    h1
+        color: $white
+    .burger
+        .openMenu
+            color: $white
+        .blur
+            .container
+                background-color: $noir
+                .closeMenu
+                    color: $white
+                .link
+                    color: $white  
+
+.home.darkMode
+    button
+        background-color: $noir
+
+    button.click
+        color: $white
+        background-color: #474747
+    
+    .employe
+        color: $white 
+        button[type="submit"]
+            background-color: $orange_clair
+    
+    .service
+        color: $white 
+        p.poste
+            color: #E1E1E1
+            background-color: #474747
+        .icon.dark
+            color: $white
+        .icon:last-child
+            color: $orange
+            background-color: $white
+        button.dark + p
+            color: $white
+    
+    .addTips.darkMode
+        
+
+        

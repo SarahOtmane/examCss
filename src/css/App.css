@@ -1,0 +1,515 @@
+@charset "UTF-8";
+/* fichier : reset.scss 
+
+ce fichier commence par un  c'est ce qu'on appelle un partial il a pour but d'être importer dans un fichier de style /
+
+ http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, main {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/*HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1.3;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+figure img {
+  display: block;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+
+/* ------------- Global css ------------- */
+body {
+  max-width: 576px;
+  min-height: 100vh;
+  font-family: "Arial", sans-serif;
+}
+
+.remove ul li, .addEmploye form button.poste, .addTips .message, .service div button.dark, .service ul li, .employe ul li div, .employe ul li, .remove figure, .addEmploye figure, .remove article.remove, .home article {
+  display: flex;
+  flex-direction: row;
+}
+
+.remove ul li, .addEmploye form p, .service div p, .service ul li, .employe ul li, header, .addEmploye form button[type=submit], .addTips .button, .service div button[type=submit], .employe button[type=submit] {
+  width: 80%;
+  margin: auto;
+}
+
+.remove ul li p, .addEmploye form p, .service ul li p, .employe ul li div p, header article h1 {
+  font-weight: bold;
+}
+
+.addEmploye form button[type=submit], .addTips .button, .service div button[type=submit], .employe button[type=submit] {
+  background-color: rgba(255, 107, 64, 0.2117647059);
+  color: #FF6B40;
+  border: none;
+  font-size: 1.5rem;
+  border-radius: 2rem;
+  padding: 1rem;
+  position: fixed;
+  margin-left: 10%;
+}
+
+.burger .blur .container .down .link, .burger .blur .container .up .link {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  color: #000000;
+}
+
+.remove article.remove, .home article {
+  padding: 0 10%;
+  margin: 2rem 0;
+  justify-content: space-between;
+}
+.remove article.remove button, .home article button {
+  color: #999999;
+  background-color: #fff;
+  border: none;
+  font-size: 1.3rem;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+.remove article.remove button.click, .home article button.click {
+  color: #000000;
+  background-color: #E9E9E9;
+}
+
+.remove figure, .addEmploye figure {
+  width: 40%;
+  justify-content: space-between;
+  margin-left: 30%;
+  margin-top: 5rem;
+  border: 1px solid rgba(0, 0, 0, 0.0901960784);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.0901960784);
+  position: fixed;
+}
+
+/* ------------- Header ------------- */
+header {
+  padding-top: 2rem;
+  position: relative;
+}
+header article {
+  width: 60%;
+}
+header article p {
+  color: #999999;
+  font-size: 17px;
+}
+header article h1 {
+  font-size: 34px;
+}
+
+/* ------------- Home ------------- */
+/* ------------- Employe ------------- */
+.employe ul {
+  height: 60vh;
+  overflow: auto;
+}
+.employe ul li {
+  border: 1px solid #B8B8B8;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+.employe ul li div {
+  align-items: center;
+}
+.employe ul li div p {
+  padding-left: 2rem;
+  font-size: 1.5rem;
+}
+.employe ul li input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.employe ul li input[type=checkbox]:checked {
+  background-color: #FF6B40;
+  border-color: #FF6B40;
+}
+/* ------------- Service ------------- */
+.service h2 {
+  color: #FF6B40;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.service ul {
+  height: 27vh;
+  overflow: auto;
+}
+.service ul li {
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #D9D9D9;
+  margin-bottom: 1rem;
+}
+.service ul li p {
+  font-size: 20px;
+}
+.service ul li p.poste {
+  color: #818181;
+  background-color: #EDEDED;
+  font-size: 15px;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+}
+.service div {
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+}
+.service div p {
+  color: #FF6B40;
+  text-align: center;
+  font-size: 24px;
+  margin: 1.5rem auto;
+}
+.service div button.dark {
+  padding: 0.3rem;
+  width: 40%;
+  margin: auto;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  border: none;
+  border-radius: 3rem;
+  background-color: rgba(255, 107, 64, 0.2117647059);
+  border: 1px solid #FF6B40;
+}
+.service div button.dark .icon {
+  font-size: 70px;
+  padding: 1rem;
+  border-radius: 50%;
+}
+.service div button.dark .icon.light {
+  color: #FF6B40;
+  background-color: #ffffff;
+}
+.service div button.dark + p {
+  color: #000000;
+}
+.service div button[type=submit] {
+  position: inherit;
+}
+
+/* ------------- Burger ------------- */
+.burger {
+  height: 100vh;
+  max-height: 100vh;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+}
+.burger .openMenu {
+  font-size: 38px;
+  position: absolute;
+  top: 50px;
+  right: 30px;
+}
+.burger .blur {
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+  width: 100%;
+}
+.burger .blur .container {
+  background: #ffffff;
+  height: 100%;
+  width: 80vw;
+  text-align: end;
+  position: relative;
+}
+.burger .blur .container .up {
+  position: absolute;
+  right: 0;
+  width: 70vw;
+  margin-top: 50px;
+}
+.burger .blur .container .up .link:first-child {
+  border-right: 6px solid #FF6B40;
+  color: #FF6B40;
+}
+.burger .blur .container .up .link .big {
+  font-size: 31px;
+  margin-right: 10px;
+}
+.burger .blur .container .up .link + hr {
+  border: 0.2px solid #E2E2E2;
+  width: 80%;
+}
+.burger .blur .container .down .link {
+  justify-content: center;
+}
+.burger .blur .container .down .link .small {
+  font-size: 20px;
+  margin-left: 10px;
+}
+.burger .blur .container .closeMenu {
+  font-size: 45px;
+  margin-top: 50px;
+  margin-right: 30px;
+}
+.burger .blur .container .down {
+  position: absolute;
+  bottom: 0;
+  left: 7%;
+  width: 85%;
+}
+.burger .blur .container .down .red {
+  color: red;
+}
+.burger .blur .container .down .link + hr {
+  border: 0.2px solid #E2E2E2;
+  width: 95%;
+}
+.burger .blur .container p {
+  font-size: 20px;
+}
+.burger .blur .container span {
+  color: red;
+}
+
+.disappear {
+  display: none;
+}
+
+.isBlur {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+/* ------------- Inputt ------------- */
+div.input {
+  width: 80%;
+  margin: auto;
+  font-size: 20px;
+  margin-top: 25px;
+}
+div.input label {
+  width: 100%;
+  color: #FF6B40;
+  font-weight: bold;
+}
+div.input input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border: none;
+  background: #F4F4F4;
+  border-radius: 7px;
+}
+
+/* --------------- Tips ---------------*/
+.addTips .shortcut {
+  display: flex;
+  justify-content: center;
+}
+.addTips .shortcut .tips {
+  border: 2px solid #FF6B40;
+  color: #FF6B40;
+  background: #ffffff;
+  border-radius: 25px;
+  padding: 7px 22px;
+  font-size: 20px;
+  text-align: center;
+  margin: 30px 20px 0 20px;
+}
+.addTips .button {
+  margin-left: 0;
+}
+.addTips .message {
+  color: #3CDC4C;
+  background-color: #F7F7F7;
+  border-bottom: 1px solid #3CDC4C;
+  position: absolute;
+  top: 0;
+  left: 15%;
+  padding: 1rem 0;
+  font-size: 25px;
+  width: 70%;
+}
+.addTips .message p {
+  margin: auto;
+}
+
+/* --------------- AddEmploye ---------------*/
+.addEmploye form p {
+  color: #FF6B40;
+  font-size: 20px;
+  margin-top: 2rem;
+}
+.addEmploye form button.poste {
+  padding: 0.3rem;
+  width: 40%;
+  margin: auto;
+  margin-top: 2rem;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  border: none;
+  border-radius: 3rem;
+  background-color: rgba(255, 107, 64, 0.2117647059);
+  border: 1px solid #FF6B40;
+}
+.addEmploye form button.poste .icon {
+  font-size: 70px;
+  padding: 1rem;
+  border-radius: 50%;
+}
+.addEmploye form button.poste .icon.selected {
+  color: #FF6B40;
+  background-color: #ffffff;
+}
+.addEmploye form button + p {
+  color: #000000;
+  text-align: center;
+}
+.addEmploye form button[type=submit] {
+  margin-top: 4rem;
+  position: inherit;
+}
+/* --------------- RemoveEmploye ---------------*/
+.remove article.remove {
+  width: 70%;
+  margin: auto;
+  margin-top: 3rem;
+}
+.remove ul {
+  height: 55vh;
+  margin-top: 3rem;
+  overflow: auto;
+}
+.remove ul li {
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #D9D9D9;
+  margin-bottom: 1rem;
+}
+.remove ul li p {
+  font-size: 20px;
+}
+.remove ul li p.poste {
+  color: #818181;
+  background-color: #EDEDED;
+  font-size: 15px;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+}
+.remove figure {
+  margin-top: 2rem;
+}
+
+/* ------------- Dark mode ------------- */
+body.darkMode {
+  background-color: #000000;
+}
+
+header.darkMode h1 {
+  color: #ffffff;
+}
+header.darkMode .burger .openMenu {
+  color: #ffffff;
+}
+header.darkMode .burger .blur .container {
+  background-color: #000000;
+}
+header.darkMode .burger .blur .container .closeMenu {
+  color: #ffffff;
+}
+header.darkMode .burger .blur .container .link {
+  color: #ffffff;
+}
+
+.home.darkMode button {
+  background-color: #000000;
+}
+.home.darkMode button.click {
+  color: #ffffff;
+  background-color: #474747;
+}
+.home.darkMode .employe {
+  color: #ffffff;
+}
+.home.darkMode .employe button[type=submit] {
+  background-color: rgba(255, 107, 64, 0.2117647059);
+}
+.home.darkMode .service {
+  color: #ffffff;
+}
+.home.darkMode .service p.poste {
+  color: #E1E1E1;
+  background-color: #474747;
+}
+.home.darkMode .service .icon.dark {
+  color: #ffffff;
+}
+.home.darkMode .service .icon:last-child {
+  color: #FF6B40;
+  background-color: #ffffff;
+}
+.home.darkMode .service button.dark + p {
+  color: #ffffff;
+}/*# sourceMappingURL=App.css.map */
