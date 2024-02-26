@@ -187,7 +187,6 @@ header article h1 {
 }
 .employe ul li input[type=checkbox]:checked {
   background-color: #FF6B40;
-  border-color: #FF6B40;
 }
 /* ------------- Service ------------- */
 .service h2 {
