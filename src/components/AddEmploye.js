@@ -7,6 +7,10 @@ import { BiDish } from "react-icons/bi";
 
 import { useState } from "react";
 
+import avatarAdmin from '../svg/avatarAdminN.svg';
+import avatarAdd from '../svg/avatarAddO.svg';
+import avatarRemove from '../svg/avatarRemoveN.svg';
+
 
 function AddEmploye({allEmploye, setAllEmploye, isDarkMode}){
     const [poste, setPoste] = useState('salle');
@@ -45,6 +49,11 @@ function AddEmploye({allEmploye, setAllEmploye, isDarkMode}){
                 <p>{poste==="salle" ? "Serveur" : "Cuisinier"}</p>
                 <button type="submit">Ajouter</button>
             </form>
+            <figure>
+                <a href='/'><img src={avatarAdmin} alt="" /></a>
+                <a href='/add'><img src={avatarAdd} alt="" /></a>
+                <a href='/remove'><img src={avatarRemove} alt="" /></a>
+            </figure>
         </body>
     )
 }

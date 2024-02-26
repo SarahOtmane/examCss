@@ -3,6 +3,9 @@ import { useState } from "react";
 
 import avatar from '../svg/avatar.svg';
 
+import avatarAdmin from '../svg/avatarAdminN.svg';
+import avatarAdd from '../svg/avatarAddN.svg';
+import avatarRemove from '../svg/avatarRemoveO.svg';
 
 function RemoveEmploye({allEmploye, setAllEmploye, isDarkMode}){
     const [postC, setPostC] = useState('salle');
@@ -56,6 +59,11 @@ function RemoveEmploye({allEmploye, setAllEmploye, isDarkMode}){
                     </li>
                 ))}
             </ul>
+            <figure>
+                <a href='/'><img src={avatarAdmin} alt="" /></a>
+                <a href='/add'><img src={avatarAdd} alt="" /></a>
+                <a href='/remove'><img src={avatarRemove} alt="" /></a>
+            </figure>
         </body>
     )
 }

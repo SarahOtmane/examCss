@@ -80,7 +80,7 @@ body {
   font-family: "Arial", sans-serif;
 }
 
-.remove ul li, .addEmploye form button.poste, .service div button.dark, .service ul li, .employe ul li div, .employe ul li, .remove article.remove, .home article {
+.remove ul li, .addEmploye form button.poste, .service div button.dark, .service ul li, .employe ul li div, .employe ul li, .remove figure, .addEmploye figure, .remove article.remove, .home article {
   display: flex;
   flex-direction: row;
 }
@@ -129,6 +129,18 @@ body {
 .remove article.remove button.click, .home article button.click {
   color: #000000;
   background-color: #E9E9E9;
+}
+
+.remove figure, .addEmploye figure {
+  width: 40%;
+  justify-content: space-between;
+  margin-left: 30%;
+  margin-top: 5rem;
+  border: 1px solid rgba(0, 0, 0, 0.0901960784);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.0901960784);
+  position: fixed;
 }
 
 /* ------------- Header ------------- */
@@ -402,16 +414,16 @@ div.input input {
 }
 .addEmploye form button[type=submit] {
   margin-top: 4rem;
+  position: inherit;
 }
-
-/* --------------- AddEmploye ---------------*/
+/* --------------- RemoveEmploye ---------------*/
 .remove article.remove {
   width: 70%;
   margin: auto;
   margin-top: 3rem;
 }
 .remove ul {
-  height: 65vh;
+  height: 55vh;
   margin-top: 3rem;
   overflow: auto;
 }
@@ -431,6 +443,9 @@ div.input input {
   font-size: 15px;
   padding: 0.5rem 1rem;
   border-radius: 2rem;
+}
+.remove figure {
+  margin-top: 2rem;
 }
 
 /* ------------- Dark mode ------------- */

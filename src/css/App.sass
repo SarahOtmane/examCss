@@ -54,6 +54,18 @@ body
             color: $noir
             background-color: #E9E9E9
 
+%figure
+    @extend %row
+    width: 40%
+    justify-content: space-between
+    margin-left: 30%
+    margin-top: 5rem 
+    border: 1px solid #00000017
+    padding: .5rem 1rem   
+    border-radius: .5rem
+    box-shadow: 0px 0px 12px 0px #00000017
+    position: fixed
+
 
 
 
@@ -396,24 +408,29 @@ div.input
             border-radius: 3rem
             background-color: $orange_clair
             border: 1px solid $orange
-    
+
             .icon
                 font-size: 70px
                 padding: 1rem
                 border-radius: 50%
-            
+
             .icon.selected
                 color: $orange
                 background-color: $white
-        
+
         button + p
             color: $noir
             text-align: center
-        
+
         button[type='submit']
             @extend %button
             margin-top: 4rem
-    
+            position: inherit
+        
+    figure
+        @extend %figure
+
+
 
 
 
@@ -422,7 +439,7 @@ div.input
 
 
         
-/* --------------- AddEmploye ---------------*/
+/* --------------- RemoveEmploye ---------------*/
 .remove
     article.remove
         @extend %bouton-choix
@@ -431,7 +448,7 @@ div.input
         margin-top: 3rem
     
     ul
-        height: 65vh
+        height: 55vh
         margin-top: 3rem
         overflow: auto
         li
@@ -453,6 +470,10 @@ div.input
                 font-size: 15px
                 padding: .5rem 1rem
                 border-radius: 2rem
+    
+    figure
+        @extend %figure
+        margin-top: 2rem
 
 
 
