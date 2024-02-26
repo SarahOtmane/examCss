@@ -10,3 +10,72 @@ body
 header
     p
         color: #999999
+
+
+/* ------------- Burger ------------- */
+
+.burger
+    height: 100vh
+    max-height: 100vh
+    .openMenu
+        font-size: 38px
+        position: absolute
+        top: 50px
+        right: 30px
+    .blur
+        display: flex
+        justify-content: flex-end
+        height: 100%
+        width: 100%
+        .container
+            background: $white
+            height: 100%
+            width: 80vw
+            text-align: end
+            position: relative
+            .up
+                position: absolute
+                right: 0
+                width: 70vw
+                margin-top: 50px
+                .link:first-child
+                    border-right: 6px solid $orange
+                    color: $orange
+                .link
+                    @extend %link
+                    .big
+                        font-size: 31px
+                        margin-right: 10px
+            .down .link
+                @extend %link
+                justify-content: center
+                .small
+                    font-size: 20px
+                    margin-left: 10px
+            .link:first-child
+                border-bottom: 1px solid $line
+            .closeMenu
+                font-size: 45px
+                margin-top: 50px
+                margin-right: 30px
+            .down
+                position: absolute
+                bottom: 0
+                left: 7%
+                width: 85%
+                .red
+                    color: red
+            p
+                font-size: 20px
+            span
+                color: red
+.disappear
+    display: none
+.isBlur
+    -webkit-backdrop-filter: blur(10px)
+    backdrop-filter: blur(10px)
+
+%link
+    display: flex
+    align-items: center
+    padding: 20px
