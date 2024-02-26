@@ -25,7 +25,7 @@ function App(){
             <Routes>
                 <Route path='/' element={<Home allEmploye={allEmploye} isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />} />
                 <Route path='/tips' element={<AddTips isDarkMode={isDarkMode} />} />
-                <Route path='/addemploye' element={<AddEmploye setAllEmploye={setAllEmploye} isDarkMode={isDarkMode} />} />
+                <Route path='/addemploye' element={<AddEmploye allEmploye={allEmploye} setAllEmploye={setAllEmploye} isDarkMode={isDarkMode} />} />
             </Routes>
         </BrowserRouter>
     )

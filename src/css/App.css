@@ -85,7 +85,7 @@ body {
   flex-direction: row;
 }
 
-.addEmploye p, .service div p, .service ul li, .employe ul li, header, .addTips .button, .service div button[type=submit], .employe button[type=submit] {
+.addEmploye p, .service div p, .service ul li, .employe ul li, header, .addEmploye button[type=submit], .addTips .button, .service div button[type=submit], .employe button[type=submit] {
   width: 80%;
   margin: auto;
 }
@@ -94,7 +94,7 @@ body {
   font-weight: bold;
 }
 
-.addTips .button, .service div button[type=submit], .employe button[type=submit] {
+.addEmploye button[type=submit], .addTips .button, .service div button[type=submit], .employe button[type=submit] {
   background-color: rgba(255, 107, 64, 0.2117647059);
   color: #FF6B40;
   border: none;
@@ -399,6 +399,9 @@ div.input input {
 .addEmploye button + p {
   color: #000000;
   text-align: center;
+}
+.addEmploye button[type=submit] {
+  margin-top: 4rem;
 }
 
 /* ------------- Dark mode ------------- */
