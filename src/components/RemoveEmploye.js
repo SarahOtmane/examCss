@@ -23,6 +23,15 @@ function RemoveEmploye({allEmploye, setAllEmploye, isDarkMode}){
         }
     }
 
+    const [zIndex, setZIndex] = useState(-2);
+
+    const handleClick = () => {
+    const currentZIndex = zIndex;
+
+    const newZIndex = currentZIndex + 2;
+
+    setZIndex(newZIndex);
+    };
 
     return(
         <body className="remove">
@@ -45,17 +54,19 @@ function RemoveEmploye({allEmploye, setAllEmploye, isDarkMode}){
             </article>
             <ul>
                 {postC === "salle" && salle.map((employe, index) => (
-                    <li key={index}>
+                    <li key={index} className="relative"  onClick={handleClick}>
                         <img src={avatar} alt='Avatar'/> 
                         <p>{employe.nom}</p> 
                         <p className='poste'>{employe.poste}</p>
+                        <button className="supp" style={{ zIndex: zIndex }}>Supression</button>
                     </li>
                 ))}
                 {postC === "cuisine" && cuisine.map((employe, index) => (
-                    <li key={index}>
+                    <li key={index} className="relative"  onClick={handleClick}>
                         <img src={avatar} alt='Avatar'/> 
                         <p>{employe.nom}</p> 
                         <p className='poste'>{employe.poste}</p>
+                        <button className="supp" style={{ zIndex: zIndex }}>Supression</button>
                     </li>
                 ))}
             </ul>

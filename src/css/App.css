@@ -511,4 +511,30 @@ header.darkMode .burger .blur .container .link {
 }
 .home.darkMode .service button.dark + p {
   color: #ffffff;
+}
+.relative {
+  position: relative;
+  background: #ffffff;
+  z-index: 5;
+}
+.relative .supp {
+  position: absolute;
+  right: 0;
+  background: #bb0000;
+  border: none;
+  height: 100%;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 25px 20px 20px 20px;
+  z-index: -2;
+}
+.relative .poste::after {
+  content: " ";
+  position: absolute;
+  background: #ffffff;
+  width: 113px;
+  height: 100%;
+  top: -8px;
+  right: 0px;
+  z-index: -1;
 }/*# sourceMappingURL=App.css.map */

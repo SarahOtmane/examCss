@@ -544,5 +544,26 @@ header.darkMode
     
     .addTips.darkMode
         
-
-        
+.relative
+    position: relative
+    background: $white
+    z-index: 5
+    .supp
+        position: absolute
+        right: 0
+        background: $suppButton
+        border: none
+        height: 100%
+        color: $white
+        font-weight: bold
+        padding: 25px 20px 20px 20px
+        z-index: -2
+    .poste::after
+        content: " "
+        position: absolute
+        background: $white
+        width: 113px
+        height: 100%
+        top: -8px
+        right: 0px
+        z-index: -1
