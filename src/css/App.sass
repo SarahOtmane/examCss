@@ -116,7 +116,7 @@ header
         margin-bottom: 1.5rem
     
     ul
-        height: 50vh
+        height: 40vh
         overflow: auto
         li
             @extend %width-80
@@ -139,21 +139,38 @@ header
                 border-radius: 2rem
 
     div
-        position: fixed
         width: 100%
+        height: max-content
 
         p
             color: $orange
+            text-align: center
             font-size: 24px
             @extend %width-80
+            margin-bottom: 1rem
         
+        button.dark
+            padding: 1.5rem 2rem
+            width: 30%
+            margin: auto
+            @extend %row
+            justify-content: space-between
+            margin-bottom: 2rem
+            border: none
+            border-radius: 3rem
+            background-color: $orange_clair
+
+            .icon
+                font-size: 40px
+
+        button.dark + p
+            color: $noir
+            margin-bottom: 2rem
 
 
         button[type="submit"]
             @extend %button
             position: inherit
-
-
 /* ------------- Burger ------------- */
 
 .burger
