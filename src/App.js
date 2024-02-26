@@ -3,6 +3,7 @@ import './css/App.css'
 import { useState } from 'react';
 import Home from './components/Home';
 import AddTips from './components/AddTips';
+import AddEmploye from './components/AddEmploye';
 
 function App(){
     const [allEmploye, setAllEmploye] = useState([
@@ -24,6 +25,7 @@ function App(){
             <Routes>
                 <Route path='/' element={<Home allEmploye={allEmploye} isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />} />
                 <Route path='/tips' element={<AddTips isDarkMode={isDarkMode} />} />
+                <Route path='/addemploye' element={<AddEmploye setAllEmploye={setAllEmploye} isDarkMode={isDarkMode} />} />
             </Routes>
         </BrowserRouter>
     )

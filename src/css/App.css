@@ -80,21 +80,21 @@ body {
   font-family: "Arial", sans-serif;
 }
 
-.service div button.dark, .service ul li, .employe ul li div, .employe ul li, .home article {
+.addEmploye button.poste, .service div button.dark, .service ul li, .employe ul li div, .employe ul li, .home article {
   display: flex;
   flex-direction: row;
 }
 
-.service div p, .service ul li, .employe ul li, header, main.addTips .button, .service div button[type=submit], .employe button[type=submit] {
+.addEmploye p, .service div p, .service ul li, .employe ul li, header, .addTips .button, .service div button[type=submit], .employe button[type=submit] {
   width: 80%;
   margin: auto;
 }
 
-.service ul li p, .employe ul li div p, header article h1 {
+.addEmploye p, .service ul li p, .employe ul li div p, header article h1 {
   font-weight: bold;
 }
 
-main.addTips .button, .service div button[type=submit], .employe button[type=submit] {
+.addTips .button, .service div button[type=submit], .employe button[type=submit] {
   background-color: rgba(255, 107, 64, 0.2117647059);
   color: #FF6B40;
   border: none;
@@ -351,11 +351,11 @@ div.input input {
 }
 
 /* --------------- Tips ---------------*/
-main.addTips .shortcut {
+.addTips .shortcut {
   display: flex;
   justify-content: center;
 }
-main.addTips .shortcut .tips {
+.addTips .shortcut .tips {
   border: 2px solid #FF6B40;
   color: #FF6B40;
   background: #ffffff;
@@ -365,8 +365,40 @@ main.addTips .shortcut .tips {
   text-align: center;
   margin: 30px 20px 0 20px;
 }
-main.addTips .button {
+.addTips .button {
   margin-left: 0;
+}
+
+/* --------------- AddEmploye ---------------*/
+.addEmploye p {
+  color: #FF6B40;
+  font-size: 20px;
+  margin-top: 2rem;
+}
+.addEmploye button.poste {
+  padding: 0.3rem;
+  width: 40%;
+  margin: auto;
+  margin-top: 2rem;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  border: none;
+  border-radius: 3rem;
+  background-color: rgba(255, 107, 64, 0.2117647059);
+  border: 1px solid #FF6B40;
+}
+.addEmploye button.poste .icon {
+  font-size: 70px;
+  padding: 1rem;
+  border-radius: 50%;
+}
+.addEmploye button.poste .icon.selected {
+  color: #FF6B40;
+  background-color: #ffffff;
+}
+.addEmploye button + p {
+  color: #000000;
+  text-align: center;
 }
 
 /* ------------- Dark mode ------------- */
