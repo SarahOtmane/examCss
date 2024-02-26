@@ -29,8 +29,7 @@ function Employe({post, list, employeSelected, setEmployeSelected, setPostC}){
                 ))}
             </ul>
             <button type='submit' name={post} onClick={e => pageSuivante(e)}>
-                Suivant 
-                <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                Suivant   <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg" >
                     <path d="M10.5625 15.875L18 8.4375L10.5625 1M18 8.4375H1H18Z" stroke="#FF6B40" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
             </button>

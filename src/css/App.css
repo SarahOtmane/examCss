@@ -80,6 +80,10 @@ body {
   font-family: "Arial", sans-serif;
 }
 
+button {
+  cursor: pointer;
+}
+
 .remove ul li, .addEmploye form button.poste, .addTips .message, .service div button.dark, .service ul li, .employe ul li div, .employe ul li, .remove figure, .addEmploye figure, .remove article.remove, .home article {
   display: flex;
   flex-direction: row;
@@ -184,9 +188,7 @@ header article h1 {
   width: 20px;
   height: 20px;
   cursor: pointer;
-}
-.employe ul li input[type=checkbox]:checked {
-  background-color: #FF6B40;
+  background: #FF6B40;
 }
 /* ------------- Service ------------- */
 .service h2 {
@@ -273,7 +275,7 @@ header article h1 {
   display: flex;
   justify-content: flex-end;
   height: 100%;
-  width: 100vw;
+  width: 100%;
 }
 .burger .blur .container {
   background: #ffffff;
@@ -386,7 +388,7 @@ div.input input {
   position: absolute;
   top: 0;
   left: 15%;
-  padding: 1rem 0;
+  padding: 1rem;
   font-size: 25px;
   width: 70%;
 }
