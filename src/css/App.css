@@ -80,21 +80,21 @@ body {
   font-family: "Arial", sans-serif;
 }
 
-.addEmploye button.poste, .service div button.dark, .service ul li, .employe ul li div, .employe ul li, .home article {
+.remove ul li, .addEmploye form button.poste, .service div button.dark, .service ul li, .employe ul li div, .employe ul li, .remove article.remove, .home article {
   display: flex;
   flex-direction: row;
 }
 
-.addEmploye p, .service div p, .service ul li, .employe ul li, header, .addEmploye button[type=submit], .addTips .button, .service div button[type=submit], .employe button[type=submit] {
+.remove ul li, .addEmploye form p, .service div p, .service ul li, .employe ul li, header, .addEmploye form button[type=submit], .addTips .button, .service div button[type=submit], .employe button[type=submit] {
   width: 80%;
   margin: auto;
 }
 
-.addEmploye p, .service ul li p, .employe ul li div p, header article h1 {
+.remove ul li p, .addEmploye form p, .service ul li p, .employe ul li div p, header article h1 {
   font-weight: bold;
 }
 
-.addEmploye button[type=submit], .addTips .button, .service div button[type=submit], .employe button[type=submit] {
+.addEmploye form button[type=submit], .addTips .button, .service div button[type=submit], .employe button[type=submit] {
   background-color: rgba(255, 107, 64, 0.2117647059);
   color: #FF6B40;
   border: none;
@@ -110,6 +110,25 @@ body {
   align-items: center;
   padding: 20px;
   color: #000000;
+}
+
+.remove article.remove, .home article {
+  padding: 0 10%;
+  margin: 2rem 0;
+  justify-content: space-between;
+}
+.remove article.remove button, .home article button {
+  color: #999999;
+  background-color: #fff;
+  border: none;
+  font-size: 1.3rem;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+.remove article.remove button.click, .home article button.click {
+  color: #000000;
+  background-color: #E9E9E9;
 }
 
 /* ------------- Header ------------- */
@@ -129,25 +148,6 @@ header article h1 {
 }
 
 /* ------------- Home ------------- */
-.home article {
-  padding: 0 10%;
-  margin: 2rem 0;
-  justify-content: space-between;
-}
-.home article button {
-  color: #999999;
-  background-color: #fff;
-  border: none;
-  font-size: 1.3rem;
-  padding: 0.5rem 1.5rem;
-  cursor: pointer;
-  border-radius: 0.5rem;
-}
-.home article button.click {
-  color: #000000;
-  background-color: #E9E9E9;
-}
-
 /* ------------- Employe ------------- */
 .employe ul {
   height: 60vh;
@@ -370,12 +370,12 @@ div.input input {
 }
 
 /* --------------- AddEmploye ---------------*/
-.addEmploye p {
+.addEmploye form p {
   color: #FF6B40;
   font-size: 20px;
   margin-top: 2rem;
 }
-.addEmploye button.poste {
+.addEmploye form button.poste {
   padding: 0.3rem;
   width: 40%;
   margin: auto;
@@ -387,21 +387,50 @@ div.input input {
   background-color: rgba(255, 107, 64, 0.2117647059);
   border: 1px solid #FF6B40;
 }
-.addEmploye button.poste .icon {
+.addEmploye form button.poste .icon {
   font-size: 70px;
   padding: 1rem;
   border-radius: 50%;
 }
-.addEmploye button.poste .icon.selected {
+.addEmploye form button.poste .icon.selected {
   color: #FF6B40;
   background-color: #ffffff;
 }
-.addEmploye button + p {
+.addEmploye form button + p {
   color: #000000;
   text-align: center;
 }
-.addEmploye button[type=submit] {
+.addEmploye form button[type=submit] {
   margin-top: 4rem;
+}
+
+/* --------------- AddEmploye ---------------*/
+.remove article.remove {
+  width: 70%;
+  margin: auto;
+  margin-top: 3rem;
+}
+.remove ul {
+  height: 65vh;
+  margin-top: 3rem;
+  overflow: auto;
+}
+.remove ul li {
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #D9D9D9;
+  margin-bottom: 1rem;
+}
+.remove ul li p {
+  font-size: 20px;
+}
+.remove ul li p.poste {
+  color: #818181;
+  background-color: #EDEDED;
+  font-size: 15px;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
 }
 
 /* ------------- Dark mode ------------- */

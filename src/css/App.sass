@@ -35,6 +35,25 @@ body
     padding: 20px
     color: $noir
 
+%bouton-choix
+        padding: 0 10%
+        margin: 2rem 0
+        @extend %row
+        justify-content: space-between
+    
+        button
+            color: #999999
+            background-color: #fff
+            border: none
+            font-size: 1.3rem   
+            padding: .5rem 1.5rem
+            cursor: pointer
+            border-radius: .5rem
+
+        button.click
+            color: $noir
+            background-color: #E9E9E9
+
 
 
 
@@ -70,23 +89,7 @@ header
 /* ------------- Home ------------- */
 .home
     article
-        padding: 0 10%
-        margin: 2rem 0
-        @extend %row
-        justify-content: space-between
-    
-        button
-            color: #999999
-            background-color: #fff
-            border: none
-            font-size: 1.3rem   
-            padding: .5rem 1.5rem
-            cursor: pointer
-            border-radius: .5rem
-
-        button.click
-            color: $noir
-            background-color: #E9E9E9
+        @extend %bouton-choix
             
 
 
@@ -373,42 +376,84 @@ div.input
 
 /* --------------- AddEmploye ---------------*/
 .addEmploye
-    p
-        color: $orange
-        font-size: 20px
-        margin-top: 2rem
-        @extend %width-80
-        @extend %weight-bold
-    
-    button.poste
-        padding: .3rem
-        width: 40%
-        margin: auto
-        margin-top: 2rem
-        @extend %row
-        justify-content: space-between
-        margin-bottom: 2rem
-        border: none
-        border-radius: 3rem
-        background-color: $orange_clair
-        border: 1px solid $orange
-
-        .icon
-            font-size: 70px
-            padding: 1rem
-            border-radius: 50%
-        
-        .icon.selected
+    form
+        p
             color: $orange
-            background-color: $white
+            font-size: 20px
+            margin-top: 2rem
+            @extend %width-80
+            @extend %weight-bold
     
-    button + p
-        color: $noir
-        text-align: center
+        button.poste
+            padding: .3rem
+            width: 40%
+            margin: auto
+            margin-top: 2rem
+            @extend %row
+            justify-content: space-between
+            margin-bottom: 2rem
+            border: none
+            border-radius: 3rem
+            background-color: $orange_clair
+            border: 1px solid $orange
     
-    button[type='submit']
-        @extend %button
-        margin-top: 4rem
+            .icon
+                font-size: 70px
+                padding: 1rem
+                border-radius: 50%
+            
+            .icon.selected
+                color: $orange
+                background-color: $white
+        
+        button + p
+            color: $noir
+            text-align: center
+        
+        button[type='submit']
+            @extend %button
+            margin-top: 4rem
+    
+
+
+
+
+
+
+
+        
+/* --------------- AddEmploye ---------------*/
+.remove
+    article.remove
+        @extend %bouton-choix
+        width: 70%  
+        margin: auto
+        margin-top: 3rem
+    
+    ul
+        height: 65vh
+        margin-top: 3rem
+        overflow: auto
+        li
+            @extend %width-80
+            @extend %row
+            align-items: center
+            justify-content: space-between
+            padding-bottom: 1rem
+            border-bottom: 1px solid #D9D9D9
+            margin-bottom: 1rem
+
+            p
+                font-size: 20px
+                @extend %weight-bold
+
+            p.poste
+                color: $gris_ecriture
+                background-color: $gris_back
+                font-size: 15px
+                padding: .5rem 1rem
+                border-radius: 2rem
+
 
 
 
