@@ -1,15 +1,157 @@
 @import '_reset.scss'
 @import '_variables.sass'
 
+/* ------------- Global css ------------- */
 body
     max-width: 576px
-    font-family:' Arial', sans-serif
+    min-height: 100vh
+    font-family:'Arial', sans-serif
+
+%row
+    display: flex
+    flex-direction: row
+
+%width-80
+    width: 80%
+    margin: auto
+
+%weight-bold
+    font-weight: bold
+
+%button
+    background-color: $orange_clair
+    color: $orange
+    border: none
+    font-size: 1.5rem
+    border-radius: 2rem
+    @extend %width-80
+    padding: 1rem    
+    position: fixed
+    margin-left: 10%
 
 
 /* ------------- Header ------------- */
 header
-    p
-        color: #999999
+    @extend %width-80
+    margin-top: 2rem
+    
+    article
+        width: 60%
+
+        p
+            color: #999999
+            font-size: 17px
+        
+        h1
+            font-size: 34px
+            @extend %weight-bold
+
+
+
+/* ------------- Home ------------- */
+.home
+    article
+        padding: 0 10%
+        margin: 2rem 0
+        @extend %row
+        justify-content: space-between
+    
+        button
+            color: #999999
+            background-color: #fff
+            border: none
+            font-size: 1.3rem   
+            padding: .5rem 1.5rem
+            cursor: pointer
+        button.click
+            color: $noir
+            background-color: #E9E9E9
+            border-radius: .5rem
+            
+
+/* ------------- Employe ------------- */
+.employe
+    ul
+        height: 60vh
+        overflow: auto
+
+        li
+            @extend %width-80
+            border: 1px solid #B8B8B8
+            border-radius: .5rem 
+            margin-bottom: 2rem
+            @extend %row
+            align-items: center
+            justify-content: space-between
+            padding: .5rem 1rem
+
+            div
+                @extend %row
+                align-items: center
+
+                p
+                    padding-left: 2rem
+                    font-size: 1.5rem
+                    @extend %weight-bold
+
+            input[type="checkbox"]
+                width: 20px
+                height:  20px
+                cursor: pointer
+
+            input[type="checkbox"]:checked 
+                background-color: $orange
+                border-color: $orange
+
+    button[type="submit"]
+        @extend %button
+
+
+/* ------------- Service ------------- */
+.service
+    h2
+        color: $orange
+        font-size: 24px
+        text-align: center
+        margin-bottom: 1.5rem
+    
+    ul
+        height: 50vh
+        overflow: auto
+        li
+            @extend %width-80
+            @extend %row
+            align-items: center
+            justify-content: space-between
+            padding-bottom: 1rem
+            border-bottom: 1px solid #D9D9D9
+            margin-bottom: 1.5rem
+
+            p
+                font-size: 20px
+                @extend %weight-bold
+
+            p.poste
+                color: $gris_ecriture
+                background-color: $gris_back
+                font-size: 15px
+                padding: .5rem 1rem
+                border-radius: 2rem
+
+    div
+        position: fixed
+        width: 100%
+
+        p
+            color: $orange
+            font-size: 24px
+            @extend %width-80
+        
+
+
+        button[type="submit"]
+            @extend %button
+            position: inherit
 
 
 /* ------------- Burger ------------- */
