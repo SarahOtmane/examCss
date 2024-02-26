@@ -7,11 +7,32 @@ body
     min-height: 100vh
     font-family:'Arial', sans-serif
 
+%row
+    display: flex
+    flex-direction: row
+
+%width-80
+    width: 80%
+    margin: auto
+
+%weight-bold
+    font-weight: bold
+
+%button
+    background-color: $orange_clair
+    color: $orange
+    border: none
+    font-size: 1.5rem
+    border-radius: 2rem
+    @extend %width-80
+    padding: 1rem    
+    position: fixed
+    margin-left: 10%
+
 
 /* ------------- Header ------------- */
 header
-    width: 80%
-    margin: auto
+    @extend %width-80
     margin-top: 2rem
     
     article
@@ -23,7 +44,8 @@ header
         
         h1
             font-size: 34px
-            font-weight: bolder
+            @extend %weight-bold
+
 
 
 /* ------------- Home ------------- */
@@ -31,8 +53,7 @@ header
     article
         padding: 0 10%
         margin: 2rem 0
-        display: flex
-        flex-direction: row
+        @extend %row
         justify-content: space-between
     
         button
@@ -51,31 +72,27 @@ header
 /* ------------- Employe ------------- */
 .employe
     ul
-        max-height: 60vh
+        height: 60vh
         overflow: auto
 
         li
-            width: 80%
-            margin: auto
+            @extend %width-80
             border: 1px solid #B8B8B8
             border-radius: .5rem 
             margin-bottom: 2rem
-            display: flex
-            display: flex
-            flex-direction: row
+            @extend %row
             align-items: center
             justify-content: space-between
             padding: .5rem 1rem
 
             div
-                display: flex
-                flex-direction: row
+                @extend %row
                 align-items: center
 
                 p
                     padding-left: 2rem
                     font-size: 1.5rem
-                    font-weight: bold
+                    @extend %weight-bold
 
             input[type="checkbox"]
                 width: 20px
@@ -87,14 +104,70 @@ header
                 border-color: $orange
 
     button[type="submit"]
-        background-color: $orange_clair
+        @extend %button
+
+
+/* ------------- Service ------------- */
+.service
+    h2
         color: $orange
-        border: none
-        font-size: 1.5rem
-        border-radius: 2rem
-        width: 80%
-        padding: 1rem    
-        position: fixed
-        margin-left: 10%
+        font-size: 24px
+        text-align: center
+        margin-bottom: 1.5rem
+    
+    ul
+        height: 40vh
+        overflow: auto
+        li
+            @extend %width-80
+            @extend %row
+            align-items: center
+            justify-content: space-between
+            padding-bottom: 1rem
+            border-bottom: 1px solid #D9D9D9
+            margin-bottom: 1.5rem
+
+            p
+                font-size: 20px
+                @extend %weight-bold
+
+            p.poste
+                color: $gris_ecriture
+                background-color: $gris_back
+                font-size: 15px
+                padding: .5rem 1rem
+                border-radius: 2rem
+
+    div
+        width: 100%
+        height: max-content
+
+        p
+            color: $orange
+            text-align: center
+            font-size: 24px
+            @extend %width-80
+            margin-bottom: 1rem
+        
+        button.dark
+            padding: 1.5rem 2rem
+            width: 30%
+            margin: auto
+            @extend %row
+            justify-content: space-between
+            margin-bottom: 2rem
+            border: none
+            border-radius: 3rem
+            background-color: $orange_clair
+
+            .icon
+                font-size: 40px
+
+        button.dark + p
+            color: $noir
+            margin-bottom: 2rem
 
 
+        button[type="submit"]
+            @extend %button
+            position: inherit

@@ -51,8 +51,8 @@ function Home({ allEmploye }) {
                     </button>
                 </article>
 
-                {postC === "salle" && <Employe post="salle" list={salle} employeSelected={employeSelected} setEmployeSelected={setEmployeSelected} />}
-                {postC === "cuisine" && <Employe post="cuisine" list={cuisine} employeSelected={employeSelected} setEmployeSelected={setEmployeSelected} />}
+                {postC === "salle" && <Employe post="salle" list={salle} employeSelected={employeSelected} setEmployeSelected={setEmployeSelected} setPostC={setPostC} />}
+                {postC === "cuisine" && <Employe post="cuisine" list={cuisine} employeSelected={employeSelected} setEmployeSelected={setEmployeSelected} setPostC={setPostC} />}
                 {postC === "service" && <Service employeSelected={employeSelected} />}
             </main>
         </>
