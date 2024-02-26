@@ -2,12 +2,11 @@ import Header from "./Header";
 import Input from "./Inputt";
 // import Tips from "./Tips";
 import Button from "./Button";
-import Burger from "./Burger";
 
 function AddTips({isDarkMode}){
     
     return(
-        <main className={`addTips ${isDarkMode ? "darkMode" : " "}`}>
+        <body className={`addTips ${isDarkMode ? "darkMode" : " "}`}>
             <Header titre="Ajouter un pourboire" />
             <Input placeholder="Cerise" label="Nom de table" id="nameTable"  />
             <Input placeholder="3" label="Montant de pourboire" id="tips" />
@@ -17,7 +16,7 @@ function AddTips({isDarkMode}){
                 <Tips value="2.00" /> */}
             </div>
             <Button value="Ajouter un pourboire" />
-        </main>
+        </body>
     )
 }
 

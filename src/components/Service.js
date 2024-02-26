@@ -10,7 +10,7 @@ function Service({employeSelected, isDarkMode, setIsDarkMode}){
 
     const changeMode = () =>{ setIsDarkMode(!isDarkMode) };
 
-    const commenceService = () =>{ navigate(`/tips:${isDarkMode}`) };
+    const commenceService = () =>{ navigate(`/tips`) };
 
     return(
         <section className='service'>

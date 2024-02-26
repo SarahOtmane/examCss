@@ -9,7 +9,7 @@ import React, { useState } from 'react';
 
 function Burger (){
 
-    const [isActive, setIsActive] = useState(false);
+    const [isActive, setIsActive] = useState(true);
 
     const handleAddClass = () => {
         setIsActive(true);
