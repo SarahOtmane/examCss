@@ -3,6 +3,7 @@ import Burger from './components/Burger';
 import './css/App.css'
 import { useState } from 'react';
 import Home from './components/Home';
+import AddTips from './components/AddTips';
 
 function App(){
     const [allEmploye, setAllEmploye] = useState([
@@ -22,6 +23,7 @@ function App(){
             <Routes>
                 <Route path='/' element={<Home allEmploye={allEmploye} />} />
                 <Route path='/burger' element={<Burger />} />
+                <Route path='/tips' element={<AddTips />} />
             </Routes>
         </BrowserRouter>
     )
