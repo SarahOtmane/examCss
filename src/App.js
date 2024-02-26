@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
+import Burger from './components/Burger.js';
+import Header from './components/Header';
 import './css/App.css'
 import { useState } from 'react';
 import Home from './components/Home';
@@ -35,6 +36,7 @@ function App(){
         <BrowserRouter>
             <Routes>
                 <Route path='/' element={<Home employe={employe} />} />
+                <Route path='/burger'  element={<Burger />}/>
             </Routes>
         </BrowserRouter>
     )
