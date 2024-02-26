@@ -80,7 +80,7 @@ body {
   font-family: "Arial", sans-serif;
 }
 
-.remove ul li, .addEmploye form button.poste, .service div button.dark, .service ul li, .employe ul li div, .employe ul li, .remove figure, .addEmploye figure, .remove article.remove, .home article {
+.remove ul li, .addEmploye form button.poste, .addTips .message, .service div button.dark, .service ul li, .employe ul li div, .employe ul li, .remove figure, .addEmploye figure, .remove article.remove, .home article {
   display: flex;
   flex-direction: row;
 }
@@ -379,6 +379,20 @@ div.input input {
 }
 .addTips .button {
   margin-left: 0;
+}
+.addTips .message {
+  color: #3CDC4C;
+  background-color: #F7F7F7;
+  border-bottom: 1px solid #3CDC4C;
+  position: absolute;
+  top: 0;
+  left: 15%;
+  padding: 1rem 0;
+  font-size: 25px;
+  width: 70%;
+}
+.addTips .message p {
+  margin: auto;
 }
 
 /* --------------- AddEmploye ---------------*/

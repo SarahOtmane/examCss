@@ -1,6 +1,5 @@
 import Header from "./Header";
 import Input from "./Inputt";
-import Button from "./Button";
 
 import { PiCookingPot } from "react-icons/pi";
 import { BiDish } from "react-icons/bi";
