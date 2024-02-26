@@ -75,6 +75,7 @@ figure img {
 
 body {
   max-width: 576px;
+  min-height: 100vh;
   font-family: " Arial", sans-serif;
 }
 
