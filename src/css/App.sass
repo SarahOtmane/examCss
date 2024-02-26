@@ -29,11 +29,22 @@ body
     position: fixed
     margin-left: 10%
 
+%link
+    display: flex
+    align-items: center
+    padding: 20px
+    color: $noir
+
+
+
+
+
+
 
 /* ------------- Header ------------- */
 header
     @extend %width-80
-    margin-top: 2rem
+    padding-top: 2rem
     position: relative
     
     article
@@ -46,6 +57,13 @@ header
         h1
             font-size: 34px
             @extend %weight-bold
+
+
+
+    
+
+
+
 
 
 
@@ -64,11 +82,23 @@ header
             font-size: 1.3rem   
             padding: .5rem 1.5rem
             cursor: pointer
+            border-radius: .5rem
+
         button.click
             color: $noir
             background-color: #E9E9E9
-            border-radius: .5rem
             
+
+
+
+
+
+
+
+
+
+
+
 
 /* ------------- Employe ------------- */
 .employe
@@ -106,6 +136,16 @@ header
 
     button[type="submit"]
         @extend %button
+
+
+
+
+
+
+
+
+
+
 
 
 /* ------------- Service ------------- */
@@ -152,8 +192,8 @@ header
 
         
         button.dark
-            padding: 1.5rem 2rem
-            width: 30%
+            padding: .3rem
+            width: 40%
             margin: auto
             @extend %row
             justify-content: space-between
@@ -161,9 +201,16 @@ header
             border: none
             border-radius: 3rem
             background-color: $orange_clair
+            border: 1px solid $orange
 
             .icon
-                font-size: 40px
+                font-size: 70px
+                padding: 1rem
+                border-radius: 50%
+            
+            .icon.light
+                color: $orange
+                background-color: $white
 
         button.dark + p
             color: $noir
@@ -172,8 +219,17 @@ header
         button[type="submit"]
             @extend %button
             position: inherit
-/* ------------- Burger ------------- */
 
+
+
+
+
+
+
+
+
+
+/* ------------- Burger ------------- */
 .burger
     height: 100vh
     max-height: 100vh
@@ -210,14 +266,15 @@ header
                     .big
                         font-size: 31px
                         margin-right: 10px
+                .link + hr
+                    border: .2px solid $line
+                    width: 80%
             .down .link
                 @extend %link
                 justify-content: center
                 .small
                     font-size: 20px
                     margin-left: 10px
-            .link:first-child
-                border-bottom: 1px solid $line
             .closeMenu
                 font-size: 45px
                 margin-top: 50px
@@ -229,6 +286,9 @@ header
                 width: 85%
                 .red
                     color: red
+                .link + hr
+                    border: .2px solid $line
+                    width: 95%
             p
                 font-size: 20px
             span
@@ -239,10 +299,18 @@ header
     -webkit-backdrop-filter: blur(10px)
     backdrop-filter: blur(10px)
 
-%link
-    display: flex
-    align-items: center
-    padding: 20px
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ------------- Inputt ------------- */
@@ -263,3 +331,91 @@ div.input
         border: none
         background: $input_back
         border-radius: 7px
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------- Tips ---------------*/
+main.addTips
+    .shortcut
+        display: flex
+        justify-content: center
+        .tips
+            border: 2px solid $orange
+            color: $orange
+            background: $white
+            border-radius: 25px
+            padding: 7px 22px
+            font-size: 20px
+            text-align: center
+            margin: 30px 20px 0 20px
+    .button
+        @extend %button
+        margin-left: 0
+    
+
+
+
+
+
+
+
+
+
+
+/* ------------- Dark mode ------------- */
+body.darkMode
+    background-color: $noir
+
+header.darkMode
+    h1
+        color: $white
+    .burger
+        .openMenu
+            color: $white
+        .blur
+            .container
+                background-color: $noir
+                .closeMenu
+                    color: $white
+                .link
+                    color: $white  
+
+.home.darkMode
+    button
+        background-color: $noir
+
+    button.click
+        color: $white
+        background-color: #474747
+    
+    .employe
+        color: $white 
+        button[type="submit"]
+            background-color: $orange_clair
+    
+    .service
+        color: $white 
+        p.poste
+            color: #E1E1E1
+            background-color: #474747
+        .icon.dark
+            color: $white
+        .icon:last-child
+            color: $orange
+            background-color: $white
+        button.dark + p
+            color: $white
+    
+    .addTips.darkMode
+        
+
+        

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Burger from './Burger';
 
-function Header({ titre }) {
+function Header({ titre, isDarkMode }) {
     const [currentDate, setCurrentDate] = useState(new Date());
 
     useEffect(() => {
@@ -27,7 +27,7 @@ function Header({ titre }) {
     };
 
     return (
-        <header>
+        <header className={`${isDarkMode ? "darkMode" : " "}`}>
             <article>
                 <p>
                     {getDayOfWeek(currentDate)}, {getDayOfMonth(currentDate)} {getMonth(currentDate)}
