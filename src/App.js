@@ -22,7 +22,6 @@ function App(){
         <BrowserRouter>
             <Routes>
                 <Route path='/' element={<Home allEmploye={allEmploye} />} />
-                <Route path='/burger' element={<Burger />} />
                 <Route path='/tips' element={<AddTips />} />
             </Routes>
         </BrowserRouter>

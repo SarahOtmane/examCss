@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Burger from './Burger';
 
 function Header({ titre }) {
     const [currentDate, setCurrentDate] = useState(new Date());
@@ -33,6 +34,7 @@ function Header({ titre }) {
                 </p>
                 <h1>{titre}</h1>
             </article>
+            <Burger />
         </header>
     );
 }

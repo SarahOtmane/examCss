@@ -34,6 +34,7 @@ body
 header
     @extend %width-80
     margin-top: 2rem
+    position: relative
     
     article
         width: 60%
@@ -79,7 +80,7 @@ header
             @extend %width-80
             border: 1px solid #B8B8B8
             border-radius: .5rem 
-            margin-bottom: 2rem
+            margin-bottom: 1rem
             @extend %row
             align-items: center
             justify-content: space-between
@@ -116,7 +117,7 @@ header
         margin-bottom: 1.5rem
     
     ul
-        height: 40vh
+        height: 27vh
         overflow: auto
         li
             @extend %width-80
@@ -125,7 +126,7 @@ header
             justify-content: space-between
             padding-bottom: 1rem
             border-bottom: 1px solid #D9D9D9
-            margin-bottom: 1.5rem
+            margin-bottom: 1rem
 
             p
                 font-size: 20px
@@ -147,7 +148,8 @@ header
             text-align: center
             font-size: 24px
             @extend %width-80
-            margin-bottom: 1rem
+            margin: 1.5rem auto
+
         
         button.dark
             padding: 1.5rem 2rem
@@ -165,7 +167,6 @@ header
 
         button.dark + p
             color: $noir
-            margin-bottom: 2rem
 
 
         button[type="submit"]
@@ -176,6 +177,10 @@ header
 .burger
     height: 100vh
     max-height: 100vh
+    position: fixed
+    z-index: 999
+    top: 0
+    right: 0
     .openMenu
         font-size: 38px
         position: absolute
