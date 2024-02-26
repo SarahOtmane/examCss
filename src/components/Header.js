@@ -1,24 +1,40 @@
 import React, { useState, useEffect } from 'react';
 
-function Header(){
+function Header({ titre }) {
     const [currentDate, setCurrentDate] = useState(new Date());
 
     useEffect(() => {
         const interval = setInterval(() => {
-          setCurrentDate(new Date());
+            setCurrentDate(new Date());
         }, 1000);
-    
-        return () => clearInterval(interval);
-      }, []);
 
-    return(
+        return () => clearInterval(interval);
+    }, []);
+
+    const getDayOfWeek = (date) => {
+        const options = { weekday: 'long' };
+        return new Intl.DateTimeFormat('fr-FR', options).format(date);
+    };
+
+    const getDayOfMonth = (date) => {
+        return date.getDate();
+    };
+
+    const getMonth = (date) => {
+        const options = { month: 'long' };
+        return new Intl.DateTimeFormat('fr-FR', options).format(date);
+    };
+
+    return (
         <header>
             <article>
-                <p>{currentDate.toLocaleDateString()}</p>
-                <h1>Test</h1>
+                <p>
+                    {getDayOfWeek(currentDate)}, {getDayOfMonth(currentDate)} {getMonth(currentDate)}
+                </p>
+                <h1>{titre}</h1>
             </article>
         </header>
-    )
+    );
 }
 
 export default Header;
