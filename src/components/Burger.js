@@ -4,32 +4,44 @@ import { FaBellConcierge } from "react-icons/fa6";
 import { RiAdminFill } from "react-icons/ri";
 import { MdSystemUpdateAlt } from "react-icons/md";
 import { GoMoveToEnd } from "react-icons/go";
+import React, { useState } from 'react';
 
 
 function Burger (){
-    return <div>
-        <TbMenu />
-        <div className="blur">
-            <div className="container">
-                <IoCloseOutline />
+
+    const [isActive, setIsActive] = useState(false);
+
+    const handleAddClass = () => {
+        setIsActive(true);
+    };
+
+    const handleRemoveClass = () => {
+        setIsActive(false);
+    };
+
+    return <div className="burger">
+        <TbMenu className="openMenu" onClick={handleRemoveClass} />
+        <div className={`blur ${isActive ? '' : 'isBlur'}`}>
+            <div className={`container ${isActive ? 'disappear' : ''}`}>
+                <IoCloseOutline className="closeMenu" onClick={handleAddClass} />
                 <div className="up">
-                    <a>
-                        <FaBellConcierge />
+                    <a className="link">
+                        <FaBellConcierge className="size big" />
                         <p>Service</p>
                     </a>
-                    <a>
-                        <RiAdminFill />
+                    <a className="link">
+                        <RiAdminFill className="size big" />
                         <p>Administrateur</p>
                     </a>
                 </div>
                 <div className="down">
-                    <a>
-                        <MdSystemUpdateAlt />
+                    <a className="link">
                         <p>Modifier le service</p>
+                        <MdSystemUpdateAlt className="size small" />
                     </a>
-                    <a>
-                        <GoMoveToEnd />
-                        <p>Fermer le service</p>
+                    <a className="link">
+                        <p className="red">Fermer le service</p>
+                        <GoMoveToEnd className="size small red" />
                     </a>
                 </div>
             </div>
