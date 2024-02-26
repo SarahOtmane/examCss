@@ -9,13 +9,13 @@ import { useState } from "react";
 
 
 function AddEmploye({allEmploye, setAllEmploye, isDarkMode}){
-    const [poste, setPoste] = useState('serveur');
+    const [poste, setPoste] = useState('salle');
     const [nom, setNom] = useState("");
     const [prenom, setPrenom] =useState("");
 
     const changePoste = () =>{
-        if(poste === "serveur") setPoste("cuisinier");
-        else setPoste("serveur")
+        if(poste === "salle") setPoste("cuisine");
+        else setPoste("salle")
     }
 
     const ajoutEmploye = (e) =>{
@@ -33,16 +33,16 @@ function AddEmploye({allEmploye, setAllEmploye, isDarkMode}){
 
     return(
         <body className="addEmploye">
-            <Header titre="Ajouter un pourboire" />
+            <Header titre="Ajout d'employés" />
             <form onSubmit={e => ajoutEmploye(e)}>
                 <Input placeholder="Vox" label="Nom" id="lastNameEmploye" value={nom} inputChange={inputChange} />
                 <Input placeholder="Lana" label="Prénom" id="nameEmploye" value={prenom} inputChange={inputChange} />
                 <p>Poste occupé</p>
                 <button className='poste' onClick={changePoste} type="button">
-                    <BiDish className={`icon ${isDarkMode ? "dark" : "light"} ${poste==="serveur" ? "selected" : ""}`} />
-                    <PiCookingPot className={`icon ${poste==="cuisinier" ? "selected" : ""}`} />
+                    <BiDish className={`icon ${isDarkMode ? "dark" : "light"} ${poste==="salle" ? "selected" : ""}`} />
+                    <PiCookingPot className={`icon ${poste==="cuisine" ? "selected" : ""}`} />
                 </button>
-                <p>{poste==="serveur" ? "Serveur" : "Cuisinier"}</p>
+                <p>{poste==="salle" ? "Serveur" : "Cuisinier"}</p>
                 <button type="submit">Ajouter</button>
             </form>
         </body>
