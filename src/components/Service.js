@@ -2,10 +2,15 @@ import avatar from '../svg/avatar.svg';
 
 import { GoSun } from "react-icons/go";
 import { IoMoonOutline } from "react-icons/io5";
+import { useNavigate } from 'react-router-dom';
 
 
 function Service({employeSelected, isDarkMode, setIsDarkMode}){
-    const changeMode = () =>{ setIsDarkMode(!isDarkMode) }
+    const navigate = useNavigate();
+
+    const changeMode = () =>{ setIsDarkMode(!isDarkMode) };
+
+    const commenceService = () =>{ navigate(`/tips:${isDarkMode}`) };
 
     return(
         <section className='service'>
@@ -28,7 +33,7 @@ function Service({employeSelected, isDarkMode, setIsDarkMode}){
                     </button>
                     <p>{isDarkMode ? "soir" : "midi"}</p>
                 </div>
-                <button type='submit'>Commencer le service !</button>
+                <button type='submit' onClick={() => commenceService()}>Commencer le service !</button>
             </div>
         </section>
     )

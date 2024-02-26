@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Burger from './components/Burger';
 import './css/App.css'
 import { useState } from 'react';
 import Home from './components/Home';
@@ -24,7 +23,7 @@ function App(){
         <BrowserRouter>
             <Routes>
                 <Route path='/' element={<Home allEmploye={allEmploye} isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />} />
-                <Route path='/tips' element={<AddTips />} />
+                <Route path='/tips' element={<AddTips isDarkMode={isDarkMode} />} />
             </Routes>
         </BrowserRouter>
     )

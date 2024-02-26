@@ -85,7 +85,7 @@ body {
   flex-direction: row;
 }
 
-.service div p, .service ul li, .employe ul li, header, .service div button[type=submit], .employe button[type=submit] {
+.service div p, .service ul li, .employe ul li, header, main.addTips .button, .service div button[type=submit], .employe button[type=submit] {
   width: 80%;
   margin: auto;
 }
@@ -94,7 +94,7 @@ body {
   font-weight: bold;
 }
 
-.service div button[type=submit], .employe button[type=submit] {
+main.addTips .button, .service div button[type=submit], .employe button[type=submit] {
   background-color: rgba(255, 107, 64, 0.2117647059);
   color: #FF6B40;
   border: none;
@@ -348,6 +348,25 @@ div.input input {
   border: none;
   background: #F4F4F4;
   border-radius: 7px;
+}
+
+/* --------------- Tips ---------------*/
+main.addTips .shortcut {
+  display: flex;
+  justify-content: center;
+}
+main.addTips .shortcut .tips {
+  border: 2px solid #FF6B40;
+  color: #FF6B40;
+  background: #ffffff;
+  border-radius: 25px;
+  padding: 7px 22px;
+  font-size: 20px;
+  text-align: center;
+  margin: 30px 20px 0 20px;
+}
+main.addTips .button {
+  margin-left: 0;
 }
 
 /* ------------- Dark mode ------------- */
